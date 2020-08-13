@@ -2,11 +2,9 @@ module main
 
 import vweb
 
+[post]
 ['/api/email/incoming']
-pub fn (mut app App) incoming() vweb.Result {
-	return app.vweb.ok('Email received')
-}
-
-pub fn is_email_enabled() {
-	return true
+fn (mut app App) incoming() vweb.Result {
+	println(app.vweb.req.data)
+	return app.vweb.ok(app.vweb.req.data)
 }

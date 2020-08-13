@@ -19,6 +19,5 @@ pub fn (mut app App) init() {}
 pub fn (mut app App) init_once() {}
 
 pub fn (mut app App) index() {
-	enabled := is_email_enabled().str()
-	app.vweb.text('Welcome to GGreen $enabled')
+	app.vweb.text('Welcome to GGreen')
 }
